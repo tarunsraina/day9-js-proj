@@ -1,0 +1,64 @@
+<html>
+
+<title>Project-1</title>
+
+
+<body>
+    <center>
+
+        <h1>Concepts : Default values</h1>
+        <h1>Enter two numbers:</h1>
+        <h3>Try giving only the first value,for multiplication "1" is taken as default and for addition "0" is taken as default</h3>
+        <input id="num-1" type="text" placeholder="number 1">
+        <br>
+        <br>
+        <input id="num-2" type="text" placeholder="number 2">
+        <br>
+        <br>
+        <input type="button" value="add and multiply" onClick="addAndMultiply()">
+
+        <br>
+        <br>
+        <p id="add-ans"></p>
+        <p id="mul-ans"></p>
+    </center>
+
+    <script>
+
+        function addAndMultiply(){
+
+                let num1 = Number(document.getElementById("num-1").value);
+                let num2 = Number(document.getElementById("num-2").value);
+
+                document.getElementById("add-ans").innerHTML = "Sum : "+add(num1,num2);
+                if(num1==0){
+                    num1=1;
+                }
+                if(num2==0){
+                    num2=1;
+                }
+                document.getElementById("mul-ans").innerHTML = "Mul : "+multiply(num1,num2);
+
+        }
+
+
+        function add(x=0,y=0){
+            return x+y;
+            //console.log("called");
+        }
+
+
+        function multiply(x=1,y=1){
+            //console.log("called");
+            return x*y;
+        }
+
+    
+        
+    </script>
+
+</body>
+
+
+
+</html>
